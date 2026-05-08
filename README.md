@@ -44,7 +44,7 @@
 | Hassan Ali Shah | 24040 | [@Hassan-Ali-17](https://github.com/Hassan-Ali-17) |
 | Ahsen Ali | 24056 | [@ahsen24056ali](https://github.com/ahsen24056ali) |
 | Abdul Moeed | 24140 | [@abdul888-888](https://github.com/abdul888-888) |
-| Hamza Abbas | 24036 | [@Hammaabbas1234](https://github.com/Hammaabbas1234) |
+| Hamza Abbas | 24036 | [@Hammaabbas1234](https://github.com/hammaabbas1234) |
  
 **Course:** Principles of AI (PFAI) · Deep Learning Project · 4th Semester
 
