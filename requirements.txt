@@ -1,0 +1,13 @@
+tensorflow>=2.10
+librosa>=0.9
+noisereduce
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+fastapi
+uvicorn
+python-multipart
+requests
+tqdm
