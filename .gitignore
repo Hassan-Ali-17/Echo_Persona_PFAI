@@ -1,0 +1,35 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Large Datasets and Audio Files
+TESS Toronto emotional speech set data/
+data/
+dataset/
+*.wav
+*.mp3
+*.flac
+*.webm
+*.ogg
+dataset.csv
+temp_*
+
+# Model weights and serialized classes
+models/
+*.h5
+*.npy
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

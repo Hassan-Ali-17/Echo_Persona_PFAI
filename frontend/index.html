@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoPersona - AI Audio Emotion Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-mesh"></div>
+    
+    <main class="container">
+        <header class="header">
+            <h1 class="gradient-text">EchoPersona</h1>
+            <p class="subtitle">Personality & Emotion Detection from Audio Signals</p>
+        </header>
+
+        <div class="glass-panel main-panel">
+            <div class="interaction-area">
+                <div class="upload-section" id="upload-section">
+                    <div class="icon">📁</div>
+                    <h3>Upload Audio</h3>
+                    <p>WAV, MP3, or FLAC</p>
+                    <input type="file" id="file-upload" accept="audio/*" hidden>
+                    <button class="btn primary-btn" id="upload-btn">Choose File</button>
+                </div>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="record-section" id="record-section">
+                    <div class="icon" id="mic-icon">🎙️</div>
+                    <h3>Record Voice</h3>
+                    <p>Speak clearly for 3-5 seconds</p>
+                    <button class="btn secondary-btn" id="record-btn">Start Recording</button>
+                </div>
+            </div>
+
+            <div class="loading-state hidden" id="loading-state">
+                <div class="audio-waves">
+                    <div class="wave"></div><div class="wave"></div><div class="wave"></div>
+                    <div class="wave"></div><div class="wave"></div>
+                </div>
+                <p>Analyzing emotional patterns...</p>
+            </div>
+
+            <div class="results-area hidden" id="results-area">
+                <h2 class="result-label" id="result-emotion">Happy</h2>
+                <p class="confidence">Confidence: <span id="result-confidence">95%</span></p>
+                
+                <div class="emotion-bars" id="emotion-bars">
+                    <!-- Bars injected via JS -->
+                </div>
+                
+                <button class="btn outline-btn reset-btn" id="reset-btn">Try Another</button>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>Powered by CNN + BiLSTM + Attention • PFAI Project</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
