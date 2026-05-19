@@ -17,7 +17,25 @@ EMOTION_MAP = {
 }
 
 def extract_features(file_path):
+    # Load audio
     audio, sr = librosa.load(file_path, sr=22050, duration=3.0)
+    
+    # 1. Trim leading and trailing silence
+    try:
+        audio, _ = librosa.effects.trim(audio, top_db=25)
+    except Exception:
+        pass
+        
+    # 2. Apply noise reduction
+    try:
+        import noisereduce as nr
+        audio = nr.reduce_noise(y=audio, sr=sr)
+    except Exception:
+        pass
+        
+    if len(audio) == 0:
+        audio = np.zeros(100) # Fallback to prevent crash
+        
     
     # 1. MFCC (40)
     mfccs = librosa.feature.mfcc(y=audio, sr=sr, n_mfcc=40)
