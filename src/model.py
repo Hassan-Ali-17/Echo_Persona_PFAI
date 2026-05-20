@@ -8,7 +8,7 @@ def attention_layer(inputs):
     a = Dense(1, activation='tanh')(inputs)
     a = Softmax(axis=1)(a)
     
-    # Apply weights
+    
     output = Multiply()([inputs, a])
     # Average pool over time dimension (serializable & standard)
     output = GlobalAveragePooling1D()(output)
